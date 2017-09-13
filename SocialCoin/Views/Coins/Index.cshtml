@@ -1,0 +1,88 @@
+@model IEnumerable<SocialCoin.Models.Coin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Symbol)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.PriceUSD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceBTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DailyVolume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MarketCapUSD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableSupply)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Change1hr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Change24hr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Change7d)
+        </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rank)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.CmcId">@Html.DisplayFor(modelItem => item.Name)</a> 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceUSD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceBTC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DailyVolume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketCapUSD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableSupply)
+            </td>
+            <td class="@item.Change1hr.GetPercentageColour()">
+                @Html.DisplayFor(modelItem => item.Change1hr )
+            </td>
+            <td class="@item.Change1hr.GetPercentageColour()">
+                @Html.DisplayFor(modelItem => item.Change24hr)
+            </td>
+            <td class="@item.Change1hr.GetPercentageColour()">
+                @Html.DisplayFor(modelItem => item.Change7d)
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>
