@@ -52,7 +52,7 @@
                 @Html.DisplayFor(modelItem => item.Rank)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.CmcId">@Html.DisplayFor(modelItem => item.Name)</a> 
+                <a asp-action="Details" asp-route-name="@item.CmcId">@Html.DisplayFor(modelItem => item.Name)</a> 
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Symbol)
@@ -75,10 +75,10 @@
             <td class="@item.Change1hr.GetPercentageColour()">
                 @Html.DisplayFor(modelItem => item.Change1hr )
             </td>
-            <td class="@item.Change1hr.GetPercentageColour()">
+            <td class="@item.Change24hr.GetPercentageColour()">
                 @Html.DisplayFor(modelItem => item.Change24hr)
             </td>
-            <td class="@item.Change1hr.GetPercentageColour()">
+            <td class="@item.Change7d.GetPercentageColour()">
                 @Html.DisplayFor(modelItem => item.Change7d)
             </td>
 

@@ -32,10 +32,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Coins" asp-action="Index">Coins</a></li>
-                    <li><a asp-area="" asp-controller="Users" asp-action="Index">Users</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Users" asp-action="Details">My Profile</a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -44,6 +43,9 @@
         @RenderBody()
         <hr />
         <footer>
+            <div>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+            </div>
             <p>&copy; 2017 - SocialCoin</p>
         </footer>
     </div>
@@ -70,5 +72,7 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
+
+  
 </body>
 </html>

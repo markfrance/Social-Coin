@@ -57,7 +57,5 @@ namespace SocialCoin.Models
         [JsonProperty(PropertyName = "percent_change_7d")]
         public decimal Change7d { get; set; }
 
-
-
     }
 }

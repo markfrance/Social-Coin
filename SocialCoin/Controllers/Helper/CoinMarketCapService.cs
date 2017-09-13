@@ -24,7 +24,7 @@ namespace SocialCoin.Controllers
         {
             using (HttpClient client = new HttpClient())
             {
-                return JsonConvert.DeserializeObject<Coin>(await client.GetStringAsync($"{uri}ticker/{name}"));
+                return JsonConvert.DeserializeObject<List<Coin>>(await client.GetStringAsync($"{uri}ticker/{name}")).SingleOrDefault();
             }
         }
 

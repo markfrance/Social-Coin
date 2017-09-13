@@ -26,15 +26,14 @@ namespace SocialCoin.Controllers
         }
 
         // GET: Coins/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string name)
         {
-            if (id == null)
+            if (name == null)
             {
                 return NotFound();
             }
 
-            var coin = await _context.Coin
-                .SingleOrDefaultAsync(m => m.ID == id);
+            var coin = await service.GetCoinAsync(name);
             if (coin == null)
             {
                 return NotFound();
@@ -115,7 +114,7 @@ namespace SocialCoin.Controllers
             }
             return View(coin);
         }
-        
+
         private bool CoinExists(int id)
         {
             return _context.Coin.Any(e => e.ID == id);
