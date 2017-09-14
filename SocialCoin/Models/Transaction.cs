@@ -11,6 +11,7 @@ namespace SocialCoin.Models
         public User User { get; set; }
         public string CoinID { get; set; }
         public decimal Price { get; set; }
+        public decimal Amount { get; set; }
         public DateTime Date { get; set; }
     }
 }

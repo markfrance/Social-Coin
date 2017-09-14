@@ -33,7 +33,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Coins" asp-action="Index">Coins</a></li>
-                    <li><a asp-area="" asp-controller="Users" asp-action="Details">My Profile</a></li>
+                    <li><a asp-area="" asp-controller="Users" asp-action="Details" asp-route-id="1">My Profile</a></li>
                     
                 </ul>
             </div>
@@ -45,6 +45,9 @@
         <footer>
             <div>
                 <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                <a asp-area="" asp-controller="Users" asp-action="Index">Users</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">Twitter</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">Github</a>
             </div>
             <p>&copy; 2017 - SocialCoin</p>
         </footer>

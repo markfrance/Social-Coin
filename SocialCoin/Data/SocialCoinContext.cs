@@ -21,5 +21,9 @@ namespace SocialCoin.Models
         public DbSet<SocialCoin.Models.CoinDTO> CoinDTO { get; set; }
 
         public DbSet<SocialCoin.Models.Global> Global { get; set; }
+
+        public DbSet<SocialCoin.Models.Comment> Comment { get; set; }
+
+        public DbSet<SocialCoin.Models.Transaction> Transaction { get; set; }
     }
 }
