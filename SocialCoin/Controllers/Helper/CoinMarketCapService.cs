@@ -20,6 +20,15 @@ namespace SocialCoin.Controllers
             }
         }
 
+        public async Task<List<CoinDTO>> GetBestPerforming()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                return JsonConvert.DeserializeObject<List<CoinDTO>>(await client.GetStringAsync($"{uri}ticker/"))
+                    .OrderByDescending(i => i.Change1hr).Take(5).ToList();
+            }
+        }
+
         public async Task<Coin> GetCoinAsync(string name)
         {
             using (HttpClient client = new HttpClient())
@@ -32,7 +41,8 @@ namespace SocialCoin.Controllers
         {
             using (HttpClient client = new HttpClient())
             {
-                return JsonConvert.DeserializeObject<Global>(await client.GetStringAsync($"{uri}/global"));
+                var test = JsonConvert.DeserializeObject<Global>(await client.GetStringAsync($"{uri}/global"));
+                return test;
             }
         }
     }

@@ -7,6 +7,7 @@ namespace SocialCoin.Models
 {
     public class Global
     {
+        public int ID { get; set; }
         public decimal Total_Market_Cap_Usd { get; set; }
         public decimal Total_24hr_Volume_Usd { get; set; }
         public double Bitcoin_Percentage_Of_Market_Cap { get; set; }

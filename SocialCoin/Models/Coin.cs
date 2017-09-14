@@ -58,4 +58,18 @@ namespace SocialCoin.Models
         public decimal Change7d { get; set; }
 
     }
+
+    public class CoinDTO
+    {
+        public int ID { get; set; }
+        [JsonProperty(PropertyName = "id")]
+        public string Name { get; set; }
+
+        public string Symbol { get; set; }
+
+        [Display(Name = "1hr %")]
+        [DisplayFormat(DataFormatString = "{0}%")]
+        [JsonProperty(PropertyName = "percent_change_1h")]
+        public decimal Change1hr { get; set; }
+    }
 }

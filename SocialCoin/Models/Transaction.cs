@@ -9,7 +9,7 @@ namespace SocialCoin.Models
     {
         public int ID { get; set; }
         public User User { get; set; }
-        public Coin Coin { get; set; }
+        public string CoinID { get; set; }
         public decimal Price { get; set; }
         public DateTime Date { get; set; }
     }

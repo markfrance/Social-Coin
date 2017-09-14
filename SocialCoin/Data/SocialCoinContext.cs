@@ -17,5 +17,9 @@ namespace SocialCoin.Models
         public DbSet<SocialCoin.Models.User> User { get; set; }
 
         public DbSet<SocialCoin.Models.Coin> Coin { get; set; }
+
+        public DbSet<SocialCoin.Models.CoinDTO> CoinDTO { get; set; }
+
+        public DbSet<SocialCoin.Models.Global> Global { get; set; }
     }
 }

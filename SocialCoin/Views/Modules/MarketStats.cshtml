@@ -1,0 +1,23 @@
+@model SocialCoin.Models.Global
+
+    <ul>
+        <li>
+            Total Market Cap (USD) - $@Html.DisplayFor(model => model.Total_Market_Cap_Usd)
+        </li>
+        <li>
+            Total 24hr Volume - $@Html.DisplayFor(model => model.Total_24hr_Volume_Usd)
+        </li>
+        <li>
+            BTC % - @Html.DisplayFor(model => model.Bitcoin_Percentage_Of_Market_Cap)%
+        </li>
+        <li>
+            # of Currencies - @Html.DisplayFor(model => model.Active_Currencies)
+        </li>
+        <li>
+            # of Assets -@Html.DisplayFor(model => model.Active_Assets)
+        </li>
+        <li>
+            # of Markets - @Html.DisplayFor(model => model.Active_Markets)
+        </li>
+    </ul>
+
