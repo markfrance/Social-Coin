@@ -41,7 +41,7 @@ namespace SocialCoin.Controllers
         {
             using (HttpClient client = new HttpClient())
             {
-                var test = JsonConvert.DeserializeObject<Global>(await client.GetStringAsync($"{uri}/global"));
+                var test = JsonConvert.DeserializeObject<Global>(await client.GetStringAsync($"{uri}/global/"));
                 return test;
             }
         }

@@ -43,6 +43,16 @@
     </dl>
 </div>
 <div>
+    @Html.Partial("../Transactions/Index", Model.GetTransactions())
+</div>
+
+<div>
+    @Html.Partial("../Comments/Create", new SocialCoin.Models.Comment() { User = Model, Body ="Post a status", DatePosted = DateTime.Now})
+</div>
+<div>
+    @Html.Partial("../Comments/Index", Model.GetComments())
+</div>
+<div>
     <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
